@@ -17,7 +17,15 @@ export default function App() {
                 imagePaths:
                   response?.assets?.map((asset) => asset.uri ?? '') || [],
                 name: 'myPdf',
-                // paperSize: 'A4',
+                paperSize: 'A4',
+                customPaperSize: {
+                  height: 300,
+                  width: 300,
+                },
+                // customPaperSize: {
+                //   height: 300,
+                //   width: 300,
+                // },
               });
               FileViewer.open(filePath);
             }

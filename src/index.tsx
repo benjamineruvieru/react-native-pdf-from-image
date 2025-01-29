@@ -1,4 +1,3 @@
-import { Platform } from 'react-native';
 import PdfFromImage, { type ImageObjectNative } from './NativePdfFromImage';
 import { paperSizes } from './contants';
 import type { ImageObjectJs } from './types';
@@ -9,7 +8,7 @@ export function createPdf(params: ImageObjectJs) {
 
   // Sanitize image paths for iOS
   const sanitizedImagePaths = params.imagePaths.map((path) => {
-    if (Platform.OS === 'ios' && path.startsWith('file://')) {
+    if (path.startsWith('file://')) {
       return path.replace('file://', '');
     }
     return path;
