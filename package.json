@@ -48,7 +48,12 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "pdf-generation",
+    "library",
+    "image-to-pdf",
+    "pdf",
+    "image"
   ],
   "repository": {
     "type": "git",

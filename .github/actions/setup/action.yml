@@ -23,7 +23,7 @@ runs:
 
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
-      run: yarn
+      run: yarn install --immutable
       shell: bash
 
     - name: Cache dependencies
