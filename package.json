@@ -68,7 +68,7 @@
     "@evilmartians/lefthook": "^1.5.0",
     "@react-native-community/cli": "15.0.1",
     "@react-native/eslint-config": "^0.73.1",
-    "@release-it/conventional-changelog": "^10.0.0",
+    "@release-it/conventional-changelog": "^9.0.1",
     "@types/jest": "^29.5.5",
     "@types/react": "^18.2.44",
     "commitlint": "^17.0.2",
@@ -121,7 +121,31 @@
     },
     "plugins": {
       "@release-it/conventional-changelog": {
-        "preset": "angular"
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "✨ Features"
+            },
+            {
+              "type": "fix",
+              "section": "🐛 Bug Fixes"
+            },
+            {
+              "type": "perf",
+              "section": "💨 Performance Improvements"
+            },
+            {
+              "type": "chore(deps)",
+              "section": "🛠️ Dependency Upgrades"
+            },
+            {
+              "type": "docs",
+              "section": "📚 Documentation"
+            }
+          ]
+        }
       }
     }
   },
