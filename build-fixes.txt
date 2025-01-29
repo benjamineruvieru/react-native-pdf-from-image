@@ -1,0 +1,1 @@
+After pod install delete from ios/generated and in Xcode Pods -> Build Phases -> Compile Sources 
