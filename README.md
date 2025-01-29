@@ -1,24 +1,72 @@
-# react-native-pdf-from-image
+<h1 align="center">
+  <img width="200" height="200" src="./IMG/logo.png"/><br/>
+  React Native Pdf From Image Library
+</h1>
 
-Des
+Generate PDF documents from an array images.
 
-## Installation
+## 🌟 Features
+
+- **Image to PDF Conversion**: Effortlessly convert images into PDF documents.
+- **Customizable Paper Sizes**: Choose from standard paper sizes or define custom dimensions for your PDFs.
+
+## Old Architecture Support
+
+> [!WARNING]
+> react-native-pdf-from-image is a pure C++ TurboModule, and **requires the new architecture to be enabled**.
+>
+> - Work is ongoing to support the old architecture.
+
+## 🚀 Installation
 
 ```sh
 npm install react-native-pdf-from-image
 ```
 
-## Usage
+or
 
-
-```js
-import { multiply } from 'react-native-pdf-from-image';
-
-// ...
-
-const result = multiply(3, 7);
+```sh
+yarn add react-native-pdf-from-image
 ```
 
+```sh
+cd ios && pod install
+```
+
+## 📖 Usage
+
+Here's a basic example of how to use the library:
+
+```js
+import { createPdf } from 'react-native-pdf-from-image';
+
+const images = ['path/to/image1.jpg'];
+
+const { filePath } = createPdf({
+  imagePaths: images,
+  name: 'myPdf',
+  paperSize: 'A4',
+  customPaperSize: {
+    height: 300,
+    width: 300,
+  },
+});
+```
+
+## 📦 Props
+
+### createPdf(params)
+
+- params : An object containing the following properties:
+  - imagePaths (Array of strings): An array of file paths to the images you want to include in the PDF.
+  - name (string): The name of the PDF file to be created.
+  - paperSize (string, optional): The size of the paper for the PDF. Common sizes like 'A4' are supported.
+  - customPaperSize (object, optional): An object specifying custom dimensions for the paper size. It should have height and width properties.
+
+### Returns
+
+- An object containing:
+  - filePath (string): The file path to the generated PDF document.
 
 ## Contributing
 
@@ -26,8 +74,6 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## License
 
-MIT
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ---
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
