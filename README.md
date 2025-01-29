@@ -5,6 +5,18 @@
 
 Generate PDF documents from an array images.
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-native-pdf-from-image">
+    <img alt="npm version" src="https://badge.fury.io/js/react-native-pdf-from-image.svg"/>
+  </a>
+  <a title='License' href="https://github.com/benjamineruvieru/react-native-pdf-from-image/blob/master/LICENSE" height="18">
+    <img src='https://img.shields.io/badge/license-MIT-blue.svg' />
+  </a>
+  <a title='Tweet' href="https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20React%20Native%20PDF%20from%20Image%20Library&url=https://github.com/benjamineruvieru/react-native-pdf-from-image&via=benjamin_eru&hashtags=react,reactnative,opensource,github,ux" height="18">
+    <img src='https://img.shields.io/twitter/url/http/shields.io.svg?style=social' />
+  </a>
+</p>
+
 ## 🌟 Features
 
 - **Image to PDF Conversion**: Effortlessly convert images into PDF documents.
@@ -75,5 +87,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
----
