@@ -4,22 +4,18 @@ import android.graphics.BitmapFactory
 import android.graphics.pdf.PdfDocument
 import android.graphics.pdf.PdfDocument.PageInfo
 import com.facebook.react.bridge.Arguments
-import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
-import com.facebook.react.module.annotations.ReactModule
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
 
-@ReactModule(name = PdfFromImageModule.NAME)
-class PdfFromImageModule(
-  reactContext: ReactApplicationContext,
-) : NativePdfFromImageSpec(reactContext) {
-  override fun getName(): String = NAME
-
-  override fun createPdf(imageObject: ReadableMap): WritableMap {
+class PdfFromImageModuleImpl {
+  fun createPdf(
+    imageObject: ReadableMap,
+    documentFile: File,
+  ): WritableMap {
     val resultMap: WritableMap = Arguments.createMap()
 
     try {
@@ -28,7 +24,7 @@ class PdfFromImageModule(
 
       val document = PdfDocument()
 
-// Determine paper size
+      // Determine paper size
       val paperSize =
         if (imageObject.hasKey("paperSize")) {
           val paperSizeMap = imageObject.getMap("paperSize")
@@ -78,7 +74,6 @@ class PdfFromImageModule(
         }
       }
 
-      val documentFile = getTempFile(documentName)
       document.writeTo(FileOutputStream(documentFile))
       document.close()
 
@@ -94,11 +89,6 @@ class PdfFromImageModule(
     }
 
     return resultMap
-  }
-
-  private fun getTempFile(name: String): File {
-    val outputDir = getReactApplicationContext().getExternalCacheDir()
-    return File(outputDir, "$name.pdf")
   }
 
   companion object {

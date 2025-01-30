@@ -12,7 +12,7 @@ class PdfFromImagePackage : BaseReactPackage() {
     name: String,
     reactContext: ReactApplicationContext,
   ): NativeModule? =
-    if (name == PdfFromImageModule.NAME) {
+    if (name == PdfFromImageModuleImpl.NAME) {
       PdfFromImageModule(reactContext)
     } else {
       null
@@ -21,10 +21,10 @@ class PdfFromImagePackage : BaseReactPackage() {
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider =
     ReactModuleInfoProvider {
       val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
-      moduleInfos[PdfFromImageModule.NAME] =
+      moduleInfos[PdfFromImageModuleImpl.NAME] =
         ReactModuleInfo(
-          PdfFromImageModule.NAME,
-          PdfFromImageModule.NAME,
+          PdfFromImageModuleImpl.NAME,
+          PdfFromImageModuleImpl.NAME,
           false, // canOverrideExistingModule
           false, // needsEagerInit
           false, // isCxxModule
