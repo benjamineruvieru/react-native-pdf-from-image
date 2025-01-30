@@ -1,6 +1,14 @@
-import PdfFromImage, { type ImageObjectNative } from './NativePdfFromImage';
+import { NativeModules } from 'react-native';
+import { type ImageObjectNative } from './NativePdfFromImage';
 import { paperSizes } from './contants';
 import type { ImageObjectJs } from './types';
+
+// @ts-ignore We want to check whether __turboModuleProxy exitst, it may not
+const isTurboModuleEnabled = global.__turboModuleProxy != null;
+
+const pdffromimage = isTurboModuleEnabled
+  ? require('./NativePdfFromImage').default
+  : NativeModules.PdfFromImage;
 
 export function createPdf(params: ImageObjectJs) {
   // Sanitize document name by removing file extension
@@ -28,5 +36,5 @@ export function createPdf(params: ImageObjectJs) {
     name: sanitizedName,
   };
 
-  return PdfFromImage.createPdf(sanitizedParams);
+  return pdffromimage.createPdf(sanitizedParams);
 }

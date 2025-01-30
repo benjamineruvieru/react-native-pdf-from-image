@@ -25,7 +25,7 @@ Generate PDF documents from an array images.
 ## Old Architecture Support
 
 > [!WARNING]
-> react-native-pdf-from-image is a pure C++ TurboModule, and **requires the new architecture to be enabled**.
+> react-native-pdf-from-image is a pure TurboModule, and **requires the new architecture to be enabled**.
 >
 > - Work is ongoing to support the old architecture.
 
