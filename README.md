@@ -65,6 +65,26 @@ const { filePath } = createPdf({
 });
 ```
 
+> **Note:** When using the old architecture, make sure to await the `createPdf` function as it returns a Promise.
+
+```js
+import { createPdf } from 'react-native-pdf-from-image';
+
+// Old Architecture
+const generatePdf = async () => {
+  const images = ['path/to/image1.jpg'];
+  const { filePath } = await createPdf({
+    imagePaths: images,
+    name: 'myPdf',
+    paperSize: 'A4',
+    customPaperSize: {
+      height: 300,
+      width: 300,
+    },
+  });
+};
+```
+
 ## 📦 Props
 
 ### createPdf(params)
@@ -87,3 +107,7 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+```
+
+```
