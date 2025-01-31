@@ -4,8 +4,6 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
 import java.io.File
-import com.facebook.react.bridge.Promise
-
 
 class PdfFromImageModule(
   reactContext: ReactApplicationContext,
@@ -14,10 +12,10 @@ class PdfFromImageModule(
 
   override fun getName(): String = PdfFromImageModuleImpl.NAME
 
-  override fun createPdf(imageObject: ReadableMap  ):WritableMap {
+  override fun createPdf(imageObject: ReadableMap): WritableMap {
     val documentName = imageObject.getString("name") ?: "document"
     val documentFile = getTempFile(documentName)
-    return implementation.createPdf(imageObject, documentFile, )
+    return implementation.createPdf(imageObject, documentFile)
   }
 
   private fun getTempFile(name: String): File {

@@ -4,21 +4,20 @@ import android.graphics.BitmapFactory
 import android.graphics.pdf.PdfDocument
 import android.graphics.pdf.PdfDocument.PageInfo
 import com.facebook.react.bridge.Arguments
+import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
-import com.facebook.react.bridge.Promise
 
 class PdfFromImageModuleImpl {
-
   fun createPdf(
     imageObject: ReadableMap,
     documentFile: File,
-    promise: Promise? = null
-  ):WritableMap  {
+    promise: Promise? = null,
+  ): WritableMap {
     val resultMap: WritableMap = Arguments.createMap()
 
     try {
@@ -91,14 +90,10 @@ class PdfFromImageModuleImpl {
       e.printStackTrace()
     }
 
-    
     if (promise != null) {
       promise.resolve(resultMap)
     }
-      return resultMap
-    
-
-
+    return resultMap
   }
 
   companion object {
