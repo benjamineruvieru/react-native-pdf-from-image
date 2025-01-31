@@ -1,17 +1,21 @@
-#import <React/RCTBridgeModule.h>
+
 #ifdef RCT_NEW_ARCH_ENABLED
 #import "generated/RNPdfFromImageSpec/RNPdfFromImageSpec.h"
-#endif
+
+@interface PdfFromImage : NSObject <NativePdfFromImageSpec>
+
+
+#else
+#import <React/RCTBridgeModule.h>
 
 @interface PdfFromImage: NSObject <RCTBridgeModule>
 
-@end
+#endif
 
- #ifdef RCT_NEW_ARCH_ENABLED
-@interface PdfFromImage () <NativePdfFromImageSpec>
 
 @end
- #endif
+
+
 
 
 

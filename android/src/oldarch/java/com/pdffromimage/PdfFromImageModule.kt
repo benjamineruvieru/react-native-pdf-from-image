@@ -7,6 +7,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.module.annotations.ReactModule
 import java.io.File
+import com.facebook.react.bridge.Promise
 
 @ReactModule(name = PdfFromImageModuleImpl.NAME)
 class PdfFromImageModule(
@@ -18,10 +19,11 @@ class PdfFromImageModule(
   override fun getName(): String = PdfFromImageModuleImpl.NAME
 
   @ReactMethod
-  fun createPdf(imageObject: ReadableMap): WritableMap {
+  fun createPdf(imageObject: ReadableMap, promise: Promise ) {
+
     val documentName = imageObject.getString("name") ?: "document"
     val documentFile = getTempFile(documentName)
-    return implementation.createPdf(imageObject, documentFile)
+    implementation.createPdf(imageObject, documentFile, promise)
   }
 
   private fun getTempFile(name: String): File {

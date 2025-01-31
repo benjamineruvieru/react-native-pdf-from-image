@@ -10,12 +10,15 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
+import com.facebook.react.bridge.Promise
 
 class PdfFromImageModuleImpl {
+
   fun createPdf(
     imageObject: ReadableMap,
     documentFile: File,
-  ): WritableMap {
+    promise: Promise? = null
+  ):WritableMap  {
     val resultMap: WritableMap = Arguments.createMap()
 
     try {
@@ -88,7 +91,14 @@ class PdfFromImageModuleImpl {
       e.printStackTrace()
     }
 
-    return resultMap
+    
+    if (promise != null) {
+      promise.resolve(resultMap)
+    }
+      return resultMap
+    
+
+
   }
 
   companion object {

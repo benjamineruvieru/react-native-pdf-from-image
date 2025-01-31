@@ -1231,7 +1231,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-pdf-from-image (0.2.1):
+  - react-native-pdf-from-image (0.3.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1802,7 +1802,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: 99bd566147aaa78e872568be53ebca8a4449ddae
   React-microtasksnativemodule: 51e7813abf875408a0f367e473a65bbab6aa8481
   react-native-image-picker: ede3b0b991aae11b3c1d61c187a833720e255277
-  react-native-pdf-from-image: df24030b1da03463f0bcd1349ae69c00eeaa6c61
+  react-native-pdf-from-image: 104e1248e71aab9f87779b6ebc533deb1093da83
   React-nativeconfig: cd0fbb40987a9658c24dab5812c14e5522a64929
   React-NativeModulesApple: 4a9c304aa4fb086af32e8758ba892386d895b4d3
   React-perflogger: 721172bda31a65ce7b7a0c3bf3de96f12ef6f45d

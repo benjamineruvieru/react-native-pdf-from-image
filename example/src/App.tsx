@@ -22,11 +22,8 @@ export default function App() {
                   height: 300,
                   width: 300,
                 },
-                // customPaperSize: {
-                //   height: 300,
-                //   width: 300,
-                // },
               });
+              console.log('pdf path', filePath);
               FileViewer.open(filePath);
             }
           );
