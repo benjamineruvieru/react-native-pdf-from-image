@@ -57,7 +57,8 @@ const images = ['path/to/image1.jpg'];
 const { filePath } = createPdf({
   imagePaths: images,
   name: 'myPdf',
-  paperSize: 'A4',
+  paperSize: 'A4', // optional
+  // optional
   customPaperSize: {
     height: 300,
     width: 300,
@@ -76,7 +77,8 @@ const generatePdf = async () => {
   const { filePath } = await createPdf({
     imagePaths: images,
     name: 'myPdf',
-    paperSize: 'A4',
+    paperSize: 'A4', // optional
+    // optional
     customPaperSize: {
       height: 300,
       width: 300,
@@ -99,6 +101,8 @@ const generatePdf = async () => {
 
 - An object containing:
   - filePath (string): The file path to the generated PDF document.
+
+> **Note:** If neither paperSize or customPaperSize is passed then the image dimensions would be used as the paper size of the pdf.
 
 ## Contributing
 
