@@ -79,7 +79,6 @@ class PdfFromImageModuleImpl {
       document.writeTo(FileOutputStream(documentFile))
       document.close()
 
-      // create result map
       val filePath = documentFile.path
       resultMap.putString("filePath", filePath)
     } catch (e: FileNotFoundException) {

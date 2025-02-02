@@ -12,7 +12,6 @@ import java.io.File
 class PdfFromImageModule(
   context: ReactApplicationContext,
 ) : ReactContextBaseJavaModule(context) {
-  // declare an instance of the implementation and use it in all the methods
   private var implementation: PdfFromImageModuleImpl = PdfFromImageModuleImpl()
 
   override fun getName(): String = PdfFromImageModuleImpl.NAME

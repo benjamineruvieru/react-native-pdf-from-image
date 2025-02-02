@@ -3,7 +3,7 @@
   React Native Pdf From Image Library
 </h1>
 
-Generate PDF documents from an array images.
+Generate PDF documents from an array of images.
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-pdf-from-image">
