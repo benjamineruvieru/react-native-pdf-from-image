@@ -1,6 +1,6 @@
 {
   "name": "react-native-pdf-from-image",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Generate PDF documents from an array of images.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
