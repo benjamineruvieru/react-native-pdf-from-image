@@ -67,7 +67,7 @@
   "bugs": {
     "url": "https://github.com/benjamineruvieru/react-native-pdf-from-image/issues"
   },
-  "homepage": "https://www.benjamineruvieru.com/projects/react-native-pdf-from-image",
+  "homepage": "https://docs.benjamineruvieru.com/docs/react-native-pdf-from-image/",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
