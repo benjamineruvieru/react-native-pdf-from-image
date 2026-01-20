@@ -41,3 +41,7 @@ export type ImageObjectJs = {
     | 'Executive'
     | 'Folio';
 };
+
+export type File = {
+  filePath: string;
+};
