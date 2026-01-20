@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "18.3.1",
     "react-native": "0.77.0",
-    "react-native-file-viewer": "^2.1.5",
+    "react-native-file-viewer": "2.1.5",
     "react-native-image-picker": "^7.2.3"
   },
   "devDependencies": {
